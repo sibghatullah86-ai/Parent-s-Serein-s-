@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="60 contenus éducation positive 0-12 ans : jalons, émotions, écrans, fratrie & auto-soin. Scripts concrets, bienveillance validée, sans jugement.">
+  <meta name="author" content="Parent(s) Serein(s)">
+  <meta name="theme-color" content="#B5C7A8">
+  <title>Parent(s) Serein(s) | Éducation Bienveillante 0-12 ans</title>
+  <style>
+    :root {
+      --primary: #B5C7A8;
+      --secondary: #E8C3A8;
+      --accent: #D4E5F7;
+      --bg: #F9F9F6;
+      --text: #333333;
+      --text-light: #5A5A5A;
+      --white: #FFFFFF;
+      --radius: 12px;
+      --shadow: 0 3px 10px rgba(181, 199, 168, 0.18);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.55;
+      color: var(--text);
+      background: var(--bg);
+      font-size: 15px;
+    }
+    .container { width: 95%; max-width: 1100px; margin: 0 auto; padding: 0 0.5rem; }
+    a { color: #4A6B5A; text-decoration: none; transition: 0.2s; }
+    a:hover, a:focus { color: #2C4A3B; text-decoration: underline; }
+
+    /* Header */
+    .site-header {
+      background: linear-gradient(135deg, var(--primary), #8FAA7F);
+      color: var(--white);
+      padding: 2.5rem 1rem 1.8rem;
+      text-align: center;
+    }
+    .site-header h1 { font-size: clamp(1.7rem, 4.5vw, 2.4rem); margin-bottom: 0.4rem; font-weight: 700; }
+    .tagline { font-size: clamp(0.95rem, 2.5vw, 1.1rem); max-width: 650px; margin: 0 auto 0.6rem; opacity: 0.95; }
+    .address { font-size: 0.9rem; opacity: 0.85; margin-top: 0.5rem; }
+
+    /* Nav */
+    .sticky-nav {
+      position: sticky; top: 0; background: var(--white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06); z-index: 100; padding: 0.5rem 0;
+    }
+    .nav-scroll { display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.2rem 0; scrollbar-width: none; }
+    .nav-scroll::-webkit-scrollbar { display: none; }
+    .nav-btn { flex: 0 0 auto; padding: 0.4rem 0.8rem; border-radius: 18px; background: var(--bg); border: 1.5px solid transparent; font-weight: 500; font-size: 0.9rem; transition: 0.2s; }
+    .nav-btn:hover, .nav-btn:focus { background: var(--secondary); color: var(--text); border-color: var(--primary); text-decoration: none; }
+
+    /* Sections */
+    .section { padding: 2rem 0; }
+    .section:nth-child(even) { background: var(--white); }
+    .section h2 { font-size: clamp(1.3rem, 3.5vw, 1.7rem); color: #4A6B5A; text-align: center; margin-bottom: 1.5rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; }
+
+    /* Cards */
+    .card {
+      background: var(--white); border-radius: var(--radius); padding: 1.2rem;
+      box-shadow: var(--shadow); border-top: 4px solid var(--primary); transition: 0.2s;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(181,199,168,0.25); }
+    .card-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.4rem; }
+    .card h3 { font-size: 1.05rem; color: #2C4A3B; margin: 0; font-weight: 600; }
+    .tag { background: var(--accent); color: #3A5A80; padding: 0.2rem 0.5rem; border-radius: 10px; font-size: 0.8rem; font-weight: 500; }
+    .meta { margin: 0.6rem 0; font-size: 0.9rem; color: var(--text-light); line-height: 1.5; }
+    .script { background: #F4F7F4; padding: 0.6rem; border-radius: 8px; margin: 0.7rem 0; font-size: 0.9rem; border-left: 3px solid var(--secondary); }
+    .script strong { color: #4A6B5A; display: block; margin-bottom: 0.2rem; }
+    .ref { font-size: 0.8rem; color: #666; margin-top: 0.5rem; font-style: italic; }
+
+    /* Footer */
+    .site-footer { background: #2C3E50; color: var(--white); text-align: center; padding: 2rem 1rem; margin-top: 1rem; }
+    .disclaimer { max-width: 700px; margin: 0 auto 0.8rem; font-size: 0.88rem; opacity: 0.9; line-height: 1.5; }
+    .copyright { font-size: 0.85rem; opacity: 0.75; }
+
+    @media (prefers-reduced-motion: reduce) { .card, .nav-btn { transition: none; } html { scroll-behavior: auto; } }
+    @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } .card { padding: 1rem; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>🌼 Parent(s) Serein(s)</h1>
+    <p class="tagline">Éducation bienveillante, gestion des émotions & astuces du quotidien. Sans jugement, avec bienveillance. Vous faites déjà de votre mieux.</p>
+    <p class="address">📍 15 Rue Sainte-Catherine, 33000 Bordeaux, France</p>
+  </div>
+</header>
+
+<nav class="sticky-nav" aria-label="Thèmes">
+  <div class="container">
+    <div class="nav-scroll">
+      <a href="#p3" class="nav-btn">0-3 ans</a>
+      <a href="#p6" class="nav-btn">3-6 ans</a>
+      <a href="#p9" class="nav-btn">6-9 ans</a>
+      <a href="#p12" class="nav-btn">9-12 ans</a>
+      <a href="#emot" class="nav-btn">Émotions</a>
+      <a href="#ecran" class="nav-btn">Écrans</a>
+      <a href="#fratrie" class="nav-btn">Fratrie</a>
+      <a href="#soin" class="nav-btn">Auto-soin</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+
+  <section class="section" id="p3"><h2>👶 0-3 ans : Fondations & Premières Connexions</h2><div class="grid">
+    <article class="card"><div class="card-header"><h3>1. Pleurer, c'est communiquer</h3><span class="tag">0-12m</span></div><div class="meta">Répondre rapidement renforce l'attachement sécure. Ce n'est pas "gâter", c'est sécuriser.</div><div class="script"><strong>💬 Script :</strong> "Je suis là. Tu as besoin de moi, j'arrive."</div><div class="ref">📖 Bowlby & Ainsworth : théorie de l'attachement</div></article>
+    <article class="card"><div class="card-header"><h3>2. Angoisse de séparation (8-18m)</h3><span class="tag">1-2a</span></div><div class="meta">Phase normale de différenciation. Rituels courts et chaleureux aident le cerveau à anticiper le retour.</div><div class="script"><strong>💬 Script :</strong> "Je reviens après la sieste. Tu peux garder ton doudou."</div><div class="ref">📖 Piaget : permanence de l'objet en construction</div></article>
+    <article class="card"><div class="card-header"><h3>3. "Non !" systématique</h3><span class="tag">18-30m</span></div><div class="meta">Affirmation du soi, pas de la provocation. Proposer des choix limités réduit les bras de fer.</div><div class="script"><strong>💬 Script :</strong> "On ne court pas. Tu préfères marcher comme un ours ou sauter comme un lapin ?"</div><div class="ref">📖 Erikson : autonomie vs honte</div></article>
+    <article class="card"><div class="card-header"><h3>4. Crise de frustration</h3><span class="tag">2-3a</span></div><div class="meta">Le cortex préfrontal est immature. Nommer l'émotion active la régulation.</div><div class="script"><strong>💬 Script :</strong> "Tu voulais le jouet et il est loin. C'est frustrant. Je reste avec toi."</div><div class="ref">📖 Dr. Dan Siegel : "Name it to tame it"</div></article>
+    <article class="card"><div class="card-header"><h3>5. Propreté sans pression</h3><span class="tag">2-3a</span></div><div class="meta">Signaux physiologiques > âge calendaire. Célébrer les tentatives, ignorer les accidents.</div><div class="script"><strong>💬 Script :</strong> "Ton corps t'apprend. On nettoie ensemble, ce n'est pas grave."</div><div class="ref">📖 HAS : acquisition naturelle entre 2 et 4 ans</div></article>
+    <article class="card"><div class="card-header"><h3>6. Partage impossible avant 4 ans</h3><span class="tag">2-3a</span></div><div class="meta">Concept abstrait. Remplacer par "tour par tour" avec timer visuel.</div><div class="script"><strong>💬 Script :</strong> "Quand le sablier est fini, ce sera à Léa. En attendant, je te prête le camion."</div><div class="ref">📖 Vygotsky : zone proximale de développement</div></article>
+    <article class="card"><div class="card-header"><h3>7. Langage : baignade verbale</h3><span class="tag">0-3a</span></div><div class="meta">Parler, décrire, chanter. Corriger en reformulant, pas en reprenant.</div><div class="script"><strong>💬 Script :</strong> Enfant: "Papa parti !" → Parent: "Oui, papa est parti au travail. Il revient ce soir."</div><div class="ref">📖 INSERM : stimulation langagière précoce</div></article>
+    <article class="card"><div class="card-header"><h3>8. Limites bienveillantes</h3><span class="tag">2-3a</span></div><div class="meta">Dire ce qui est permis plutôt que l'inverse. Fermeté douce, pas de menace.</div><div class="script"><strong>💬 Script :</strong> "Je ne te laisse pas taper. Je te montre comment dire 'stop' avec les mains."</div><div class="ref">📖 Faber & Mazlish : communication respectueuse</div></article>
+  </div></section>
+
+  <section class="section" id="p6"><h2>🧒 3-6 ans : Exploration & Autonomie Naissante</h2><div class="grid">
+    <article class="card"><div class="card-header"><h3>9. Imaginaire vs Réalité</h3><span class="tag">3-5a</span></div><div class="meta">Ne pas nier les peurs. Les accompagner par le jeu et la présence.</div><div class="script"><strong>💬 Script :</strong> "Ton cerveau crée des histoires. Je reste jusqu'à ce que tu te sentes sûr."</div><div class="ref">📖 Piaget : stade préopératoire</div></article>
+    <article class="card"><div class="card-header"><h3>10. Zone calme, pas coin punition</h3><span class="tag">4-6a</span></div><div class="meta">Espace co-construit pour réguler, non isoler. Coussins, livres, sablier respiration.</div><div class="script"><strong>💬 Script :</strong> "Quand c'est trop fort, tu peux aller dans ta zone. Je viendrai te rejoindre."</div><div class="ref">📖 Goleman : intelligence émotionnelle précoce</div></article>
+    <article class="card"><div class="card-header"><h3>11. Encourager l'effort</h3><span class="tag">4-6a</span></div><div class="meta">Valoriser le processus, pas le trait fixe. Développe la mentalité de croissance.</div><div class="script"><strong>💬 Script :</strong> "J'ai vu que tu as réessayé 3 fois. Tu n'as pas abandonné."</div><div class="ref">📖 Carol Dweck : mindset développemental</div></article>
+    <article class="card"><div class="card-header"><h3>12. Empathie par modélisation</h3><span class="tag">3-6a</span></div><div class="meta">Nommer les émotions d'autrui dans le quotidien. "Regarde, il est triste."</div><div class="script"><strong>💬 Script :</strong> "Si on proposait notre mouchoir ? Comment tu te sentirais à sa place ?"</div><div class="ref">📖 Decety & Jackson : neurosciences de l'empathie</div></article>
+    <article class="card"><div class="card-header"><h3>13. Temps calme sacré</h3><span class="tag">4-6a</span></div><div class="meta">Nécessaire physiologiquement pour récupérer. Pas une récompense conditionnelle.</div><div class="script"><strong>💬 Script :</strong> "On fait 20 minutes tranquilles. Tu choisis livre ou puzzle."</div><div class="ref">📖 CNRS : rythmes biologiques du jeune enfant</div></article>
+    <article class="card"><div class="card-header"><h3>14. Préparation scolaire douce</h3><span class="tag">5-6a</span></div><div class="meta">Curiosité et motricité fine > lettres précoces. Jeux de tri, pliage, transvasement.</div><div class="script"><strong>💬 Script :</strong> "On va faire une chasse aux formes. Tu en trouves combien de ronds ?"</div><div class="ref">📖 Ministère Éducation Nationale : programmes cycle 1</div></article>
+    <article class="card"><div class="card-header"><h3>15. Gestion de l'échec</h3><span class="tag">5-6a</span></div><div class="meta">Normaliser. L'erreur est une donnée, pas un verdict.</div><div class="script"><strong>💬 Script :</strong> "C'est dur, hein ? On essaie autrement ensemble. Ou on repose ?"</div><div class="ref">📖 Carol Dweck & neuroplasticité</div></article>
+    <article class="card"><div class="card-header"><h3>16. Jeux de rôle & socialisation</h3><span class="tag">3-6a</span></div><div class="meta">Apprentissage des rôles par imitation. Fournir déguisements, cuisine, outils jouets.</div><div class="script"><strong>💬 Script :</strong> "Je suis le client. Tu me sers quoi aujourd'hui, docteur ou chef ?"</div><div class="ref">📖 Winnicott : jeu & réalité interne</div></article>
+  </div></section>
+
+  <section class="section" id="p9"><h2>📚 6-9 ans : Règles, Amitiés & Confiance en Soi</h2><div class="grid">
+    <article class="card"><div class="card-header"><h3>17. Rentrée & anxiété</h3><span class="tag">6-7a</span></div><div class="meta">Validation émotionnelle + plan d'action concret réduit l'impuissance.</div><div class="script"><strong>💬 Script :</strong> "C'est normal d'avoir le ventre noué. On dessine ensemble ce qui te fait peur."</div><div class="ref">📖 HAS : troubles anxieux de l'enfant</div></article>
+    <article class="card"><div class="card-header"><h3>18. Amitiés complexes</h3><span class="tag">7-8a</span></div><div class="meta">Écoute active > intervention immédiate. Aider à identifier les besoins relationnels.</div><div class="script"><strong>💬 Script :</strong> "Qu'est-ce que tu attends de ce copain ? Parfois, les groupes changent."</div><div class="ref">📖 Sullivan : théorie des relations interpersonnelles</div></article>
+    <article class="card"><div class="card-header"><h3>19. Devoirs & autonomie</h3><span class="tag">6-8a</span></div><div class="meta">Routine fixe, aide à la planification. Ne pas faire à sa place.</div><div class="script"><strong>💬 Script :</strong> "Tu commences par quoi ? Je reste à côté si tu bloques."</div><div class="ref">📖 Vygotsky : étayage parental</div></article>
+    <article class="card"><div class="card-header"><h3>20. Comparaison sociale</h3><span class="tag">7-9a</span></div><div class="meta">Recentrer sur le progrès personnel. Éviter "regarde X".</div><div class="script"><strong>💬 Script :</strong> "Chacun son chemin. La semaine dernière, tu n'y arrivais pas. Aujourd'hui si."</div><div class="ref">📖 Festinger : théorie de la comparaison sociale</div></article>
+    <article class="card"><div class="card-header"><h3>21. Gestion déception</h3><span class="tag">7-9a</span></div><div class="meta">Normaliser, offrir présence sans "résoudre" immédiatement.</div><div class="script"><strong>💬 Script :</strong> "Tu voulais gagner. C'est dur. On respire, puis on regarde ce qu'on a appris."</div><div class="ref">📖 Linehan : validation émotionnelle</div></article>
+    <article class="card"><div class="card-header"><h3>22. Argent & valeur</h3><span class="tag">8-9a</span></div><div class="meta">Petite somme régulière, choisir, attendre, économiser. Apprentissage concret.</div><div class="script"><strong>💬 Script :</strong> "Tu as 5€. Si tu prends ce jouet maintenant, il ne restera rien pour le livre."</div><div class="ref">📖 Banque de France : éducation financière jeunesse</div></article>
+    <article class="card"><div class="card-header"><h3>23. Mensonge exploratoire</h3><span class="tag">7-9a</span></div><div class="meta">Fonction : peur, imagination, test. Rétablir la confiance > punir.</div><div class="script"><strong>💬 Script :</strong> "Merci d'avoir dit la vérité maintenant. C'est courageux. Comment on répare ?"</div><div class="ref">📖 Talwar & Lee : développement du mensonge</div></article>
+    <article class="card"><div class="card-header"><h3>24. Rituels du soir</h3><span class="tag">6-9a</span></div><div class="meta">Lecture, parole du jour, gratitude. Transition douce vers le sommeil.</div><div class="script"><strong>💬 Script :</strong> "Quel moment t'a fait sourire aujourd'hui ?"</div><div class="ref">📖 American Academy of Pediatrics : hygiène du sommeil</div></article>
+  </div></section>
+
+  <section class="section" id="p12"><h2>🌟 9-12 ans : Pré-adolescence & Identité</h2><div class="grid">
+    <article class="card"><div class="card-header"><h3>25. Pré-puberté</h3><span class="tag">9-11a</span></div><div class="meta">Anticiper changements corporels/émotionnels avec calme et exactitude.</div><div class="script"><strong>💬 Script :</strong> "Ton corps grandit, tes émotions aussi. C'est normal. On en parle quand tu veux."</div><div class="ref">📖 ONPE : accompagnement puberté</div></article>
+    <article class="card"><div class="card-header"><h3>26. Besoin d'intimité</h3><span class="tag">10-12a</span></div><div class="meta">Frapper, respecter l'espace, ne pas fouiller sans raison grave.</div><div class="script"><strong>💬 Script :</strong> "Je frappe toujours avant d'entrer. Ton espace est le tien."</div><div class="ref">📖 Erikson : identité vs confusion</div></article>
+    <article class="card"><div class="card-header"><h3>27. Groupe de pairs</h3><span class="tag">10-12a</span></div><div class="meta">Importance accrue. Garder canal dialogue ouvert sans juger les amis.</div><div class="script"><strong>💬 Script :</strong> "Qu'est-ce que tu aimes faire avec eux ? Je suis curieux de ton monde."</div><div class="ref">📖 Steinberg : neurosciences adolescence</div></article>
+    <article class="card"><div class="card-header"><h3>28. Stress scolaire</h3><span class="tag">9-11a</span></div><div class="meta">Techniques respiration, décomposition tâches, pause réelle.</div><div class="script"><strong>💬 Script :</strong> "On coupe en 3 morceaux. 15 min, puis pause 5. Tu gères ton chrono."</div><div class="ref">📖 INSERM : charge mentale scolaire</div></article>
+    <article class="card"><div class="card-header"><h3>29. Débats & opinions</h3><span class="tag">11-12a</span></div><div class="meta">Écouter sans juger, questionner avec curiosité.</div><div class="script"><strong>💬 Script :</strong> "Intéressant. Pourquoi tu penses ça ? Tu as entendu où cette idée ?"</div><div class="ref">📖 Piaget & Kohlberg : développement moral</div></article>
+    <article class="card"><div class="card-header"><h3>30. Responsabilité valorisante</h3><span class="tag">10-12a</span></div><div class="meta">Rôles utiles > corvées imposées. Responsabiliser sans surcharger.</div><div class="script"><strong>💬 Script :</strong> "La famille fonctionne grâce à toi. Tu préfères cuisine ou poubelles ?"</div><div class="ref">📖 Dreikurs : encouragement vs punition</div></article>
+    <article class="card"><div class="card-header"><h3>31. Échec & résilience</h3><span class="tag">9-12a</span></div><div class="meta">Modèle de l'erreur comme donnée. Partager ses propres erreurs adultes.</div><div class="script"><strong>💬 Script :</strong> "Moi aussi j'ai raté ce dossier. Voici comment j'ai rebondi."</div><div class="ref">📖 Masten : résilience développementale</div></article>
+    <article class="card"><div class="card-header"><h3>32. Estime hors scolaire</h3><span class="tag">10-12a</span></div><div class="meta">Valoriser compétences manuelles, artistiques, relationnelles.</div><div class="script"><strong>💬 Script :</strong> "Ton dessin rend les gens heureux. C'est un vrai talent."</div><div class="ref">📖 Harter : théorie de l'estime de soi multidimensionnelle</div></article>
+    <article class="card"><div class="card-header"><h3>33. Hygiène & routine</h3><span class="tag">11-12a</span></div><div class="meta">Négocier, co-construire, éviter contrôle strict.</div><div class="script"><strong>💬 Script :</strong> "Quelle douche t'arrange : avant ou après devoirs ?"</div><div class="ref">📖 HAS : autonomie progressive</div></article>
+    <article class="card"><div class="card-header"><h3>34. Valeurs & éthique</h3><span class="tag">9-12a</span></div><div class="meta">Dilemmes moraux simples en famille. Pas de sermon, questionnement.</div><div class="script"><strong>💬 Script :</strong> "Si tu voyais un copain tricher, que ferais-tu ? Pourquoi ?"</div><div class="ref">📖 Kohlberg : stades moraux</div></article>
+  </div></section>
+
+  <section class="section" id="emot"><h2>💭 Coaching Émotionnel & Scripts Clés</h2><div class="grid">
+    <article class="card"><div class="card-header"><h3>35. Crise en public</h3><span class="tag">Tout âge</span></div><div class="script"><strong>💬 Script :</strong> "Je vois que c'est trop fort. On sort respirer 2 minutes. Je reste avec toi."</div><div class="meta">Baisser le regard, ton neutre, sécurité physique d'abord.</div></article>
+    <article class="card"><div class="card-header"><h3>36. Refus d'effort</h3><span class="tag">4-10a</span></div><div class="script"><strong>💬 Script :</strong> "C'est difficile, hein ? On coupe en deux. Tu commences, je finis."</div><div class="meta">Éviter "fais un effort". Proposer étayage.</div></article>
+    <article class="card"><div class="card-header"><h3>37. "Je te déteste"</h3><span class="tag">3-9a</span></div><div class="script"><strong>💬 Script :</strong> "Tu es très en colère contre ce que je fais, pas contre moi. Je comprends."</div><div class="meta">Découpler enfant/émotion. Ne pas contre-attaquer.</div></article>
+    <article class="card"><div class="card-header"><h3>38. Refus de manger</h3><span class="tag">1-8a</span></div><div class="script"><strong>💬 Script :</strong> "Ton corps décide. Je propose, tu choisis quoi et combien."</div><div class="meta">Division des responsabilités (Satter).</div></article>
+    <article class="card"><div class="card-header"><h3>39. Devoirs non faits</h3><span class="tag">6-12a</span></div><div class="script"><strong>💬 Script :</strong> "Que s'est-il passé ? On regarde ensemble comment organiser demain."</div><div class="meta">Curiosité > accusation. Co-construction.</div></article>
+    <article class="card"><div class="card-header"><h3>40. Conflit couple visible</h3><span class="tag">Tout âge</span></div><div class="script"><strong>💬 Script :</strong> "On n'était pas d'accord, mais on s'aime. Désolé pour la tension."</div><div class="meta">Réparation > perfection. Modéliser la gestion de conflit.</div></article>
+    <article class="card"><div class="card-header"><h3>41. Jalousie fratrie</h3><span class="tag">3-10a</span></div><div class="script"><strong>💬 Script :</strong> "Tu as besoin de temps seul avec moi ? C'est noté, on le prévoit ce week-end."</div><div class="meta">Temps individuel > comparaison.</div></article>
+    <article class="card"><div class="card-header"><h3>42. Colère parentale</h3><span class="tag">Adulte</span></div><div class="script"><strong>💬 Script :</strong> "Je fais une pause. Son cerveau immature ne calcule pas encore."</div><div class="meta">Méta-cognition parentale. Respirer 4-7-8.</div></article>
+  </div></section>
+
+  <section class="section" id="ecran"><h2>📱 Gestion des Écrans & Vie Moderne</h2><div class="grid">
+    <article class="card"><div class="card-header"><h3>43. Contrat écran familial</h3><span class="tag">6-12a</span></div><div class="meta">Co-construction > imposition. Tableau visuel, horaires, lieux sans écran.</div><div class="ref">📖 OMS : recommandations 2020</div></article>
+    <article class="card"><div class="card-header"><h3>44. Contenu violent/inadapté</h3><span class="tag">7-12a</span></div><div class="meta">Débrief immédiat. Valider, contextualiser, vérifier compréhension.</div><div class="script"><strong>💬 Script :</strong> "Qu'as-tu ressenti ? C'est une fiction. La vraie violence blesse."</div></article>
+    <article class="card"><div class="card-header"><h3>45. Zone sans écran avant sommeil</h3><span class="tag">Tout âge</span></div><div class="meta">1h avant = mélatonine préservée. Remplacer par lecture/audio.</div><div class="ref">📖 Inserm : lumière bleue & sommeil</div></article>
+    <article class="card"><div class="card-header"><h3>46. Réseaux sociaux débutants</h3><span class="tag">10-12a</span></div><div class="meta">Accompagnement, confidentialité, droit à la déconnexion.</div><div class="script"><strong>💬 Script :</strong> "Tu partages seulement avec des amis réels. On vérifie ensemble."</div></article>
+    <article class="card"><div class="card-header"><h3>47. Écran vs ennui</h3><span class="tag">3-9a</span></div><div class="meta">L'ennui est fertile. Proposer, ne pas imposer. Laisser le vide créer.</div><div class="script"><strong>💬 Script :</strong> "Tu t'ennuies ? Parfait. Ton cerveau va inventer quelque chose."</div></article>
+    <article class="card"><div class="card-header"><h3>48. Usage éducatif</h3><span class="tag">5-12a</span></div><div class="meta">Co-utilisation, temps limité, retour verbal. L'outil sert, ne remplace pas.</div><div class="ref">📖 CNESCO : numérique éducatif encadré</div></article>
+  </div></section>
+
+  <section class="section" id="fratrie"><h2>👫 Dynamiques Fratrie</h2><div class="grid">
+    <article class="card"><div class="card-header"><h3>49. Comparaison entre enfants</h3><span class="tag">3-12a</span></div><div class="meta">Bannir "regarde ton frère". Valoriser le cheminement unique.</div><div class="script"><strong>💬 Script :</strong> "Chacun unique. Je vois tes efforts à toi, c'est ce qui compte."</div></article>
+    <article class="card"><div class="card-header"><h3>50. Partage forcé</h3><span class="tag">3-7a</span></div><div class="meta">Respecter le jeu en cours. Proposer "quand tu auras fini".</div><div class="script"><strong>💬 Script :</strong> "Il joue maintenant. Tu lui dis 'quand j'ai fini, je te le passe'."</div></article>
+    <article class="card"><div class="card-header"><h3>51. Favoritisme ressenti</h3><span class="tag">5-10a</span></div><div class="meta">Temps individuel régulier. Ne pas justifier, écouter la douleur.</div><div class="script"><strong>💬 Script :</strong> "J'entends que tu te sens mis de côté. Parlons de ce dont tu as besoin."</div></article>
+    <article class="card"><div class="card-header"><h3>52. Conflits physiques</h3><span class="tag">4-10a</span></div><div class="meta">Intervention calme, séparation, écoute alternée, recherche solution.</div><div class="script"><strong>💬 Script :</strong> "On ne tape pas. Chacun son tour. Comment on règle ça ensemble ?"</div></article>
+    <article class="card"><div class="card-header"><h3>53. Nouvel arrivant</h3><span class="tag">2-8a</span></div><div class="meta">Préparation progressive, rôle valorisant, valider régression temporaire.</div><div class="script"><strong>💬 Script :</strong> "Tu seras un grand frère/sœur important. On va t'aider à t'y retrouver."</div></article>
+    <article class="card"><div class="card-header"><h3>54. Espaces individuels</h3><span class="tag">6-12a</span></div><div class="meta">Coin à soi, même petit. Respecter "ne rentre pas".</div><div class="script"><strong>💬 Script :</strong> "Quand la porte est fermée, on attend ou on demande."</div></article>
+  </div></section>
+
+  <section class="section" id="soin"><h2>🌿 Auto-Soin Parental & Durabilité</h2><div class="grid">
+    <article class="card"><div class="card-header"><h3>55. Charge mentale invisible</h3><span class="tag">Adulte</span></div><div class="meta">Lister, externaliser, partager. Ce n'est pas "gérer mieux", c'est "répartir".</div><div class="script"><strong>💬 Script :</strong> "J'ai besoin que tu prennes X en autonomie. On fait le point dimanche."</div></article>
+    <article class="card"><div class="card-header"><h3>56. Pauses micro-régulation</h3><span class="tag">Quotidien</span></div><div class="meta">3x/j : 1 min respiration, étirement, eau. Système nerveux se recharge.</div><div class="ref">📖 Porges : théorie polyvagale</div></article>
+    <article class="card"><div class="card-header"><h3>57. Culpabilité parentale</h3><span class="tag">Adulte</span></div><div class="meta">Ne pas viser la perfection. Viser la "réparation".</div><div class="script"><strong>💬 Script :</strong> "Je n'ai pas réagi comme je voulais. On recommence demain."</div></article>
+    <article class="card"><div class="card-header"><h3>58. Couple & parentalité</h3><span class="tag">Adulte</span></div><div class="meta">15 min/semaine sans enfants, sans logistique. Juste parler, rire.</div><div class="ref">📖 Gottman : rituels de connexion</div></article>
+    <article class="card"><div class="card-header"><h3>59. Demander de l'aide</h3><span class="tag">Adulte</span></div><div class="meta">Signe de force, pas de faiblesse. Voisin, famille, professionnel, association.</div><div class="script"><strong>💬 Script :</strong> "Je sature cette semaine. Peux-tu prendre les enfants mardi ?"</div></article>
+    <article class="card"><div class="card-header"><h3>60. Souffle long & cohérence</h3><span class="tag">Quotidien</span></div><div class="meta">5 min/jour cohérence cardiaque. Baisse cortisol, augmente patience.</div><div class="ref">📖 CNRS & cohérence cardiaque</div></article>
+  </div></section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="disclaimer">
+      ⚠️ Ces contenus s'appuient sur les recommandations de l'INSERM, de la HAS, de l'OMS et de la recherche en psychologie du développement. 
+      Ils ne remplacent pas un accompagnement thérapeutique ou médical. En cas de détresse persistante, consultez un professionnel de santé mentale ou un pédopsychiatre.
+    </p>
+    <p style="margin: 0.8rem 0;">📍 15 Rue Sainte-Catherine, 33000 Bordeaux, France</p>
+    <p class="copyright">© 2026 Parent(s) Serein(s). Tous droits réservés. Fait avec 🌼 pour les familles.</p>
+  </div>
+</footer>
+
+</body>
+</html>
